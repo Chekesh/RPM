@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rasmer_100dp">100dp</dimen>
+    <dimen name="rasm_50sp">40sp</dimen>
+    <dimen name="rasmer_10dp">10dp</dimen>
+    <dimen name="rasmer_130dp">130dp</dimen>
+</resources>
