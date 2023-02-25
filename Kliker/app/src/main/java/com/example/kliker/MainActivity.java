@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
             counter = savedInstanceState.getInt("counter");
         }
         setContentView(R.layout.activity_main);
+        ((TextView)findViewById(R.id.txt_counter)).setText(counter.toString());
         Toast.makeText(this, "onCreate()", Toast.LENGTH_LONG).show();
     }
 
@@ -27,14 +28,8 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null &&
                 savedInstanceState.containsKey("counter")){
             counter = savedInstanceState.getInt("counter");
+            ((TextView)findViewById(R.id.txt_counter)).setText(counter.toString());
         }
-    }
-
-
-    @Override
-    protected void onStart(){
-        super.onStart();
-        resetUI();
     }
 
     @Override
@@ -42,11 +37,6 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         outState.putInt("counter", counter);
     }
-
-    private void resetUI() {
-        ((TextView)findViewById(R.id.txt_counter)).setText(counter.toString());
-    }
-
 
     public void onClikBtnAddPhone(View view){
         counter=counter+10000;
